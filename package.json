@@ -3,11 +3,17 @@
   "version": "1.0.2",
   "description": "Node.js module to print path tree.",
   "main": "lib",
+  "bin": {
+    "pathtree": "./bin/pathtree"
+  },
   "scripts": {
     "test": "./ci/test.js"
   },
   "repository": "okunishinishi/node-pathtree",
-  "keywords": [],
+  "keywords": [
+    "tree",
+    "inspect"
+  ],
   "author": {
     "name": "okunishinishi",
     "email": "okunishitaka.com@gmail.com",
