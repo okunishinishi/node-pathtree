@@ -1,0 +1,45 @@
+{
+  "name": "pathtree",
+  "version": "1.0.0",
+  "description": "Node.js module to print path tree.",
+  "main": "lib",
+  "scripts": {
+    "test": "./ci/test.js"
+  },
+  "repository": "okunishinishi/node-pathtree",
+  "keywords": [],
+  "author": {
+    "name": "okunishinishi",
+    "email": "okunishitaka.com@gmail.com",
+    "url": "http://okunishitaka.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/okunishinishi/node-pathtree/issues"
+  },
+  "homepage": "https://github.com/okunishinishi/node-pathtree#readme",
+  "dependencies": {
+    "argx": "^1.3.1",
+    "arrayreduce": "^1.1.0",
+    "arraysort": "^1.0.3",
+    "async": "^1.4.2",
+    "cli-color": "^1.0.0",
+    "expandglob": "^1.0.1",
+    "extend": "^3.0.0",
+    "minimatch": "^3.0.0",
+    "objnest": "^1.2.3"
+  },
+  "devDependencies": {
+    "ape-covering": "^1.0.8",
+    "ape-releasing": "^1.0.16",
+    "ape-reporting": "^1.0.9",
+    "ape-tasking": "^1.0.7",
+    "ape-testing": "^1.3.2",
+    "ape-tmpl": "^1.3.13",
+    "ape-updating": "^1.1.0",
+    "coz": "^3.1.4",
+    "coz-tmpl": "^1.1.0",
+    "injectmock": "^1.1.3",
+    "sharegit": "^1.0.0"
+  }
+}

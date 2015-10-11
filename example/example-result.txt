@@ -1,0 +1,11 @@
+.
+├── foo
+│   ├── bar
+│   │   ├── baz.txt
+│   │   └── quz.txt
+│   └── quzz
+│        └── quzzz.txt
+└── zzz
+     └── bar
+          ├── baz.txt
+          └── quz.txt
