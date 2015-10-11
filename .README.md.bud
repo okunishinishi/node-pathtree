@@ -20,7 +20,9 @@ module.exports = apeTmpl.readmeMdBud({
     },
     overview: 'doc/overview.md',
     links: require('./doc/links'),
-    vars: {}
+    vars: {
+        "signature": require('./signature.json')
+    }
 });
 
 if (!module.parent) {

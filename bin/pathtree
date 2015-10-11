@@ -1,0 +1,39 @@
+#!/usr/bin/env node
+
+/**
+ * Command line interface of pathtree.
+ */
+
+"use strict";
+
+var program = require('commander'),
+    pkg = require('../package'),
+    pathtree = require('../lib');
+
+program
+    .version(pkg['version'])
+    .usage('[options] <dirname> ')
+    .description(pkg['description'])
+    .option('-I, --ignore <ignore>', "Name to ignore.");
+
+program.parse(process.argv);
+
+
+//=========================
+// Run main command
+//=========================
+
+pathtree.apply(pathtree, program.args.concat({
+    ignore: program.ignore
+}), done);
+
+
+/** When command done. */
+function done(err) {
+    if (err) {
+        console.error(err);
+        process.exit(1);
+    } else {
+        process.exit(0);
+    }
+}

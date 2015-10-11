@@ -97,6 +97,41 @@ pathtree('.', {
 
 <!-- Section from "doc/readme/02.Usage.md.hbs" End -->
 
+<!-- Section from "doc/readme/03.Options.md.hbs" Start -->
+
+<a name="section-doc-readme-03-options-md"></a>
+Options
+---------
+
+| Key | Default | Description |
+| --- | --- | --- |
+| ignore |  | Name to ignore. |
+
+
+<!-- Section from "doc/readme/03.Options.md.hbs" End -->
+
+<!-- Section from "doc/readme/04.CLI.md.hbs" Start -->
+
+<a name="section-doc-readme-04-c-l-i-md"></a>
+Using with CLI
+---------
+
+Install as a global module.
+
+```bash
+$ npm install pathtree -g
+```
+
+Then,
+
+```bash
+$ pathtree . -I node_modules
+```
+
+
+
+<!-- Section from "doc/readme/04.CLI.md.hbs" End -->
+
 
 <!-- Sections Start -->
 
