@@ -1,6 +1,6 @@
 {
   "name": "pathtree",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Node.js module to print path tree.",
   "main": "lib",
   "scripts": {
@@ -24,6 +24,7 @@
     "arraysort": "^1.0.3",
     "async": "^1.4.2",
     "cli-color": "^1.0.0",
+    "commander": "^2.8.1",
     "expandglob": "^1.0.1",
     "extend": "^3.0.0",
     "minimatch": "^3.0.0",

@@ -68,7 +68,30 @@ Usage
 ---------
 
 ```javascript
+var pathtree = require('pathtree');
 
+pathtree('.', {
+    ignore: 'node_modules'
+}, function () {
+
+});
+
+
+```
+
+
+```bash
+.
+├── foo
+│   ├── bar
+│   │   ├── baz.txt
+│   │   └── quz.txt
+│   └── quzz
+│        └── quzzz.txt
+└── zzz
+     └── bar
+          ├── baz.txt
+          └── quz.txt
 ```
 
 
