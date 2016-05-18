@@ -1,41 +1,37 @@
 /**
  * Test case for pathtree.
- * Runs with nodeunit.
+ * Runs with mocha.
  */
+'use strict'
 
-var Pathtree = require('../lib/pathtree.js');
+const Pathtree = require('../lib/pathtree.js')
+const assert = require('assert')
+const co = require('co')
 
-exports.setUp = function (done) {
-    done();
-};
+describe('pathtree', function () {
+  it('To string', () => co(function * () {
+    let values = new Pathtree().toString([
+      'foo',
+      'foo/bar',
+      'foo/bar/baz',
+      'foo/bar/quz',
+      'foo/quzz',
+      'foo/quzz/quzzz',
+      'zzz/bar/baz',
+      'zzz/bar/quz'
+    ], '.')
+    assert.ok(values)
+  }))
 
-exports.tearDown = function (done) {
-    done();
-};
+  it('Do inspect', () => co(function * () {
+    let pathtree = new Pathtree()
+    yield pathtree.inspect('.', {
+      ignore: [
+        'node_modules'
+      ],
+      cwd: __dirname + '/..'
+    })
+  }))
+})
 
-exports['To string'] = function (test) {
-    var values = new Pathtree().toString([
-        'foo',
-        'foo/bar',
-        'foo/bar/baz',
-        'foo/bar/quz',
-        'foo/quzz',
-        'foo/quzz/quzzz',
-        'zzz/bar/baz',
-        'zzz/bar/quz'
-    ], '.');
-    test.ok(values);
-    test.done();
-};
-
-exports['Do inspect'] = function (test) {
-    new Pathtree().inspect(".", {
-        ignore: [
-            'node_modules'
-        ],
-        cwd: __dirname + '/..'
-    }, function (err) {
-        test.ifError(err);
-        test.done();
-    });
-};
+/* global describe, it */

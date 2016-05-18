@@ -1,24 +1,21 @@
 /**
  * Test case for create.
- * Runs with nodeunit.
+ * Runs with mocha.
  */
+'use strict'
 
-var create = require('../lib/create.js');
+const create = require('../lib/create.js')
+const assert = require('assert')
+const co = require('co')
 
-exports.setUp = function (done) {
-    done();
-};
-
-exports.tearDown = function (done) {
-    done();
-};
-
-exports['Create'] = function (test) {
-    var bound = create({}).bundle();
-    test.ok(bound);
+describe('create', function () {
+  it('Create', () => co(function * () {
+    let bound = create({}).bundle()
+    assert.ok(bound)
     bound.print([
-        'foo/bar'
-    ], 'baz');
-    test.done();
-};
+      'foo/bar'
+    ], 'baz')
+  }))
+})
 
+/* global describe, it */

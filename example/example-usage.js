@@ -1,8 +1,9 @@
-var pathtree = require('pathtree');
+'use strict'
+
+const pathtree = require('pathtree')
 
 pathtree('.', {
-    ignore: 'node_modules'
-}, function () {
-
-});
-
+  ignore: 'node_modules'
+}).then(() => {
+  /* ... */
+})
